@@ -1,13 +1,13 @@
 package ru.netology.service;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class CashbackHackServiceTest {
+class CashbackHackServiceJUnit5Test {
 
     @Test
-    public void shouldShowRemainIfAmountIs_0() {
+    void shouldShowRemainIfAmountIs_0() {
         CashbackHackService service = new CashbackHackService();
         int actual = service.remain(0);
         int expected = 1000;
@@ -15,7 +15,7 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    public void shouldShowRemainIfAmountIs_100() {
+    void shouldShowRemainIfAmountIs_100() {
         CashbackHackService service = new CashbackHackService();
         int actual = service.remain(100);
         int expected = 900;
@@ -23,7 +23,7 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    public void shouldShowRemainIfAmountIs_999() {
+    void shouldShowRemainIfAmountIs_999() {
         CashbackHackService service = new CashbackHackService();
         int actual = service.remain(999);
         int expected = 1;
@@ -31,7 +31,7 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    public void shouldShowRemainIfAmountIs_1000() {
+    void shouldShowRemainIfAmountIs_1000() {
         CashbackHackService service = new CashbackHackService();
         int actual = service.remain(1000);
         int expected = 0;
@@ -39,7 +39,7 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    public void shouldShowRemainIfAmountIs_1001() {
+    void shouldShowRemainIfAmountIs_1001() {
         CashbackHackService service = new CashbackHackService();
         int actual = service.remain(1001);
         int expected = 999;
@@ -47,7 +47,7 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    public void shouldShowRemainIfAmountIs_1300() {
+    void shouldShowRemainIfAmountIs_1300() {
         CashbackHackService service = new CashbackHackService();
         int actual = service.remain(1300);
         int expected = 700;
@@ -55,7 +55,7 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    public void shouldShowRemainIfAmountIs_2000() {
+    void shouldShowRemainIfAmountIs_2000() {
         CashbackHackService service = new CashbackHackService();
         int actual = service.remain(2000);
         int expected = 0;
